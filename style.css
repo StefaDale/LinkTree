@@ -5,15 +5,18 @@ body {
 
 .title{
     font-family: serif;
-    font-size: 40px;
-    color: purple;
+    font-size: 50px;
+    color: rgb(255, 0, 255);
 }
 
 .linktree{
     border-radius: 10px;
     box-shadow: 2px 2px rgba(0, 0, 0, 0.349);
     text-align: center;
-    background-color: rgb(209, 209, 209);
+    background-image: url("assets/wallpaper.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 3rem;
     min-height: 100vh;
     box-sizing: border-box;
@@ -41,6 +44,7 @@ body {
     p{
         font-size: 30px;
         font-weight: bold;
+        color: whitesmoke
     }
 
     .link-wrapper {
@@ -65,14 +69,14 @@ a img {
 }
 
 .linktree > .link-wrapper a.instagram {
-    background-color: rgb(226, 0, 226);
+    background-color: rgba(226, 0, 226, 0.65);
     &:hover{
-        background-color: rgba(226, 0, 226, 0.712);
+        background-color: rgb(226, 0, 226);
     }
 }
 
 .linktree > .link-wrapper a.github {
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.295);
     color: white;
 
     .icon-hover {
@@ -95,7 +99,7 @@ a img {
 }
 
 .linktree > .link-wrapper a.discord{
-    background-color: #5865F2;
+    background-color: rgba(88, 101, 242, 0.65);
 
     &:hover{
         background-color: #0519f5d8;
@@ -103,7 +107,7 @@ a img {
 }
 
 .linktree > .link-wrapper a.steam{
-    background-color: #091A46;
+    background-color: rgba(9, 26, 70, 0.65);
     color: white;
 
     &:hover{
@@ -112,7 +116,7 @@ a img {
 }
 
 .linktree > .link-wrapper a.sito{
-    background-color: #7c3aed;
+    background-color: rgba(124, 58, 237, 0.65);
 
     &:hover{
         background-color: #a855f7;
