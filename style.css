@@ -1,46 +1,62 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
 .title{
     font-family: serif;
     font-size: 40px;
-    margin-top: -70px;
     color: purple;
 }
 
 .linktree{
     border-radius: 10px;
     box-shadow: 2px 2px rgba(0, 0, 0, 0.349);
-    padding: 5rem;
     text-align: center;
     background-color: rgb(209, 209, 209);
+    padding: 3rem;
+    min-height: 100vh;
+    box-sizing: border-box;
    
     >.link-wrapper a {
         display: flex;
-        width: 100%;
+        width: 50%;
         padding: 12px 16px;
         border-radius: 10px;
         box-shadow: 2px 2px rgba(0, 0, 0, 0.349);
+        color: black;
         box-sizing: border-box;
         text-align: center;
         text-decoration: none;
         font-size: 50px;
         background-color: #ffffffa4;
-        font-family: cursive;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         transition: 100ms ease-in-out;
         &:hover{
             transform: scale(1.05);
             background-color: #ffffff;
         }
     }
-}
+    
+    p{
+        font-size: 30px;
+        font-weight: bold;
+    }
 
-.linktree p{
-    font-size: 30px;
-    font-weight: bold;
+    .link-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
 }
 
 a{
     align-items: center;
     justify-content: center;
     gap: 15px;
+
 }
 
 a img {
@@ -48,10 +64,73 @@ a img {
     height: 40px;
 }
 
+.linktree > .link-wrapper a.instagram {
+    background-color: rgb(226, 0, 226);
+    &:hover{
+        background-color: rgba(226, 0, 226, 0.712);
+    }
+}
+
+.linktree > .link-wrapper a.github {
+    background-color: rgb(0, 0, 0);
+    color: white;
+
+    .icon-hover {
+        display: none;
+    }
+
+    &:hover{
+        background-color: rgb(255, 255, 255);
+        color: black;
+
+        .icon-normal {
+            display: none;
+        }
+
+        .icon-hover {
+            display: inline;
+        }
+
+    }
+}
+
+.linktree > .link-wrapper a.discord{
+    background-color: #5865F2;
+
+    &:hover{
+        background-color: #0519f5d8;
+    }
+}
+
+.linktree > .link-wrapper a.steam{
+    background-color: #091A46;
+    color: white;
+
+    &:hover{
+        background-color: #0048ff;
+    }
+}
+
+.linktree > .link-wrapper a.sito{
+    background-color: #7c3aed;
+
+    &:hover{
+        background-color: #a855f7;
+    }
+}
+
 @media (max-width: 600px) {
+
+    .linktree {
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+        padding: 2rem 1rem;
+    }
+
     .linktree > .link-wrapper a {
         font-size: 26px;
-        width: 85%;
+        width: 100%;
     }
 
     .linktree > .link-wrapper a img {
