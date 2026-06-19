@@ -100,6 +100,7 @@ linktree/
 |-- assets/
 |   |-- discord_icon.svg
 |   |-- facebook_icon.svg
+|   |-- favicon.svg
 |   |-- github_icon-invertito.svg
 |   |-- github_icon.svg
 |   |-- instagram_icon.svg
@@ -110,7 +111,7 @@ linktree/
 |-- index.html
 |-- PROJECT_CONTEXT.md
 |-- PROJECT_CONTEXT_EN.md
-|-- README_EN.txt
+|-- README.txt
 |-- README_IT.txt
 `-- style.css
 ```
@@ -127,6 +128,7 @@ Contiene tutti gli asset visuali usati dalla pagina:
 
 - `discord_icon.svg`: icona Discord.
 - `facebook_icon.svg`: icona Facebook.
+- `favicon.svg`: favicon vettoriale della pagina, disegnata come piccolo albero con nodi collegati.
 - `github_icon.svg`: icona GitHub scura, usata nello stato hover del bottone GitHub.
 - `github_icon-invertito.svg`: icona GitHub chiara/invertita, usata nello stato normale del bottone GitHub su sfondo scuro.
 - `instagram_icon.svg`: icona Instagram.
@@ -182,7 +184,7 @@ Traduzione inglese del documento di contesto. Serve a permettere anche a una IA 
 
 README sintetico in italiano con descrizione, struttura, istruzioni di avvio e note di sviluppo.
 
-#### `README_EN.txt`
+#### `README.txt`
 
 README sintetico in inglese con le stesse informazioni del README italiano.
 
@@ -209,12 +211,22 @@ Esempio:
 ```html
 <title>Linktree | Nome Profilo</title>
 <meta name="description" content="Tutti i miei link principali.">
-<link rel="canonical" href="https://stefanocatalin.netlify.app/">
-<meta property="og:image" content="https://stefanocatalin.netlify.app/assets/wallpaper.jpeg">
+<link rel="canonical" href="https://stefanocatalinlinktree.netlify.app/">
+<meta property="og:image" content="https://stefanocatalinlinktree.netlify.app/assets/wallpaper.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 ```
 
 Scelta importante: per le immagini social viene usato un URL assoluto online, non un percorso relativo. Le piattaforme social devono poter raggiungere direttamente l'immagine pubblica.
+
+### Favicon personalizzata
+
+Implementata con `assets/favicon.svg` e collegata nel `<head>` di `index.html`.
+
+```html
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+```
+
+La favicon e' un SVG leggero: rappresenta un piccolo albero con rami e nodi collegati, cosi' richiama sia il tema "tree" sia l'idea dei link.
 
 ### Pagina personale con link esterni
 
@@ -513,6 +525,7 @@ Facebook e TikTok al momento usano lo stile base del bottone, senza classe CSS d
 - Icona GitHub che cambia in hover.
 - Nomi asset piu' ordinati e coerenti.
 - Meta tag SEO, Open Graph e Twitter Card nel `<head>`.
+- Favicon SVG personalizzata.
 - Documentazione estesa del progetto in italiano.
 - Traduzione inglese del contesto.
 - README sintetico in italiano e inglese.
@@ -527,7 +540,6 @@ Non risultano feature in lavorazione nel codice, ma la conversazione recente rig
 
 ### Non ancora implementato
 
-- favicon.
 - miglioramenti accessibilita' sugli `alt`.
 - `rel="noopener noreferrer"` sui link con `target="_blank"`.
 - layout senza `<br>` tra i link.
@@ -642,7 +654,7 @@ Non ci sono:
 - test;
 - file di deploy.
 
-Questo non impedisce il funzionamento, ma rende il progetto meno automatizzato. La documentazione ora esiste tramite `PROJECT_CONTEXT.md`, `PROJECT_CONTEXT_EN.md`, `README_IT.txt` e `README_EN.txt`.
+Questo non impedisce il funzionamento, ma rende il progetto meno automatizzato. La documentazione ora esiste tramite `PROJECT_CONTEXT.md`, `PROJECT_CONTEXT_EN.md`, `README_IT.txt` e `README.txt`.
 
 ## Decisioni Progettuali
 
@@ -741,7 +753,7 @@ Motivo:
 - le anteprime condivise hanno bisogno di risorse pubbliche raggiungibili online;
 - un URL canonical aiuta i motori di ricerca a capire quale versione della pagina indicizzare.
 
-Nota: se il sito viene pubblicato su un dominio diverso da `https://stefanocatalin.netlify.app/`, gli URL nei meta tag vanno aggiornati.
+Nota: se il sito viene pubblicato su un dominio diverso da `https://stefanocatalinlinktree.netlify.app/`, gli URL nei meta tag vanno aggiornati.
 
 ## Roadmap
 
@@ -756,8 +768,7 @@ Nota: se il sito viene pubblicato su un dominio diverso da `https://stefanocatal
 
 1. Aggiungere classi specifiche per Facebook e TikTok se si vuole personalizzare anche quei bottoni.
 2. Introdurre variabili CSS per colori, opacita', dimensioni e breakpoint.
-3. Aggiungere favicon.
-4. Mantenere aggiornati `PROJECT_CONTEXT.md`, `PROJECT_CONTEXT_EN.md`, `README_IT.txt` e `README_EN.txt` quando cambia il progetto.
+3. Mantenere aggiornati `PROJECT_CONTEXT.md`, `PROJECT_CONTEXT_EN.md`, `README_IT.txt` e `README.txt` quando cambia il progetto.
 
 ### Priorita bassa
 
@@ -1021,7 +1032,7 @@ E' stato creato `PROJECT_CONTEXT.md` come documento esteso per IA e sviluppatori
 
 - `PROJECT_CONTEXT_EN.md`, traduzione inglese del contesto;
 - `README_IT.txt`, README sintetico italiano;
-- `README_EN.txt`, README sintetico inglese.
+- `README.txt`, README sintetico inglese.
 
 ## Contesto Per IA
 
@@ -1125,8 +1136,9 @@ Alla creazione di questo documento:
 
 - `index.html` contiene 7 link;
 - il `<head>` contiene meta tag SEO, Open Graph e Twitter Card;
+- il `<head>` collega `assets/favicon.svg` come favicon;
 - `style.css` contiene tutto lo stile;
-- `assets/` contiene 9 asset;
+- `assets/` contiene 10 asset;
 - `wallpaper.jpeg` e' lo sfondo effettivo;
 - i bottoni desktop sono larghi `50%`;
 - i bottoni mobile sono larghi `100%`;
@@ -1141,6 +1153,7 @@ Alla creazione di questo documento:
 L'ultimo ciclo di lavoro ha riguardato:
 
 - inserimento dei meta tag SEO/social nel `<head>` di `index.html`;
+- aggiunta della favicon SVG ad albero/link;
 - aggiornamento del contesto di progetto;
 - creazione della documentazione sintetica bilingue;
 - traduzione inglese del documento di contesto.

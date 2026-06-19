@@ -25,6 +25,7 @@ linktree/
 |-- assets/
 |   |-- discord_icon.svg
 |   |-- facebook_icon.svg
+|   |-- favicon.svg
 |   |-- github_icon-invertito.svg
 |   |-- github_icon.svg
 |   |-- instagram_icon.svg
@@ -37,13 +38,13 @@ linktree/
 |-- PROJECT_CONTEXT.md
 |-- PROJECT_CONTEXT_EN.md
 |-- README_IT.txt
-`-- README_EN.txt
+`-- README.txt
 
 File principali
 ---------------
 - index.html: contiene la struttura della pagina, i link, le icone e i meta tag SEO/social.
 - style.css: contiene layout, sfondo, colori, hover, responsive e dimensioni dei bottoni.
-- assets/: contiene icone e immagine di sfondo.
+- assets/: contiene icone, favicon e immagine di sfondo.
 - PROJECT_CONTEXT.md: documentazione dettagliata in italiano per IA e sviluppatori.
 - PROJECT_CONTEXT_EN.md: traduzione inglese del contesto.
 
@@ -116,7 +117,6 @@ Problemi noti e miglioramenti consigliati
 -----------------------------------------
 - I link sono separati con <br>; sarebbe meglio usare gap su .link-wrapper.
 - I link con target="_blank" non hanno ancora rel="noopener noreferrer".
-- Manca una favicon.
 - Facebook e TikTok usano ancora lo stile base, senza classe specifica.
 - Non ci sono test automatici o strumenti di lint/format.
 

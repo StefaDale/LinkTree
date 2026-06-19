@@ -100,6 +100,7 @@ linktree/
 |-- assets/
 |   |-- discord_icon.svg
 |   |-- facebook_icon.svg
+|   |-- favicon.svg
 |   |-- github_icon-invertito.svg
 |   |-- github_icon.svg
 |   |-- instagram_icon.svg
@@ -110,7 +111,7 @@ linktree/
 |-- index.html
 |-- PROJECT_CONTEXT.md
 |-- PROJECT_CONTEXT_EN.md
-|-- README_EN.txt
+|-- README.txt
 |-- README_IT.txt
 `-- style.css
 ```
@@ -127,6 +128,7 @@ Contains all visual assets used by the page:
 
 - `discord_icon.svg`: Discord icon.
 - `facebook_icon.svg`: Facebook icon.
+- `favicon.svg`: vector favicon for the page, designed as a small tree with connected nodes.
 - `github_icon.svg`: dark GitHub icon, used in the GitHub button hover state.
 - `github_icon-invertito.svg`: light/inverted GitHub icon, used in the normal GitHub button state on a dark background.
 - `instagram_icon.svg`: Instagram icon.
@@ -182,7 +184,7 @@ English translation of the project context. It allows a non-Italian-speaking AI 
 
 Short Italian README with description, structure, run instructions, and development notes.
 
-#### `README_EN.txt`
+#### `README.txt`
 
 Short English README with the same practical information as the Italian README.
 
@@ -209,12 +211,22 @@ Example:
 ```html
 <title>Linktree | Profile Name</title>
 <meta name="description" content="Tutti i miei link principali.">
-<link rel="canonical" href="https://stefanocatalin.netlify.app/">
-<meta property="og:image" content="https://stefanocatalin.netlify.app/assets/wallpaper.jpeg">
+<link rel="canonical" href="https://stefanocatalinlinktree.netlify.app/">
+<meta property="og:image" content="https://stefanocatalinlinktree.netlify.app/assets/wallpaper.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 ```
 
 Important choice: social preview images use an absolute online URL, not a relative local path. Social platforms need to be able to fetch the public image directly.
+
+### Custom favicon
+
+Implemented with `assets/favicon.svg` and linked in the `<head>` of `index.html`.
+
+```html
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+```
+
+The favicon is a lightweight SVG. It represents a small tree with branches and connected nodes, so it suggests both the "tree" idea and the idea of links.
 
 ### Personal page with external links
 
@@ -513,6 +525,7 @@ Facebook and TikTok currently use the base button style and do not have dedicate
 - GitHub icon changes on hover.
 - Asset names are more organized and consistent.
 - SEO, Open Graph, and Twitter Card meta tags in the `<head>`.
+- Custom SVG favicon.
 - Extended Italian project documentation.
 - English translation of the project context.
 - Short README in Italian and English.
@@ -646,7 +659,7 @@ There is no:
 - tests;
 - deployment file.
 
-This does not prevent the page from working, but it means the project is not automated. Documentation now exists through `PROJECT_CONTEXT.md`, `PROJECT_CONTEXT_EN.md`, `README_IT.txt`, and `README_EN.txt`.
+This does not prevent the page from working, but it means the project is not automated. Documentation now exists through `PROJECT_CONTEXT.md`, `PROJECT_CONTEXT_EN.md`, `README_IT.txt`, and `README.txt`.
 
 ## Design Decisions
 
@@ -745,7 +758,7 @@ Reasons:
 - shared previews need publicly reachable assets;
 - a canonical URL helps search engines identify the preferred page version.
 
-Note: if the site is published on a domain different from `https://stefanocatalin.netlify.app/`, the meta tag URLs must be updated.
+Note: if the site is published on a domain different from `https://stefanocatalinlinktree.netlify.app/`, the meta tag URLs must be updated.
 
 ## Roadmap
 
@@ -760,8 +773,7 @@ Note: if the site is published on a domain different from `https://stefanocatali
 
 1. Add dedicated classes for Facebook and TikTok if those buttons need custom styling.
 2. Introduce CSS variables for colors, opacity, sizes, and breakpoints.
-3. Add a favicon.
-4. Keep `PROJECT_CONTEXT.md`, `PROJECT_CONTEXT_EN.md`, `README_IT.txt`, and `README_EN.txt` updated when the project changes.
+3. Keep `PROJECT_CONTEXT.md`, `PROJECT_CONTEXT_EN.md`, `README_IT.txt`, and `README.txt` updated when the project changes.
 
 ### Low priority
 
@@ -1026,7 +1038,7 @@ The social preview uses `wallpaper.jpeg` through an absolute URL.
 
 - `PROJECT_CONTEXT_EN.md`, English translation of the context;
 - `README_IT.txt`, short Italian README;
-- `README_EN.txt`, short English README.
+- `README.txt`, short English README.
 
 ## AI Context
 
@@ -1130,8 +1142,9 @@ At the time this document was created:
 
 - `index.html` contains 7 links;
 - the `<head>` contains SEO, Open Graph, and Twitter Card meta tags;
+- the `<head>` links `assets/favicon.svg` as the favicon;
 - `style.css` contains all styling;
-- `assets/` contains 9 assets;
+- `assets/` contains 10 assets;
 - `wallpaper.jpeg` is the active background;
 - desktop buttons are `50%` wide;
 - mobile buttons are `100%` wide;
@@ -1146,6 +1159,7 @@ At the time this document was created:
 The latest work cycle included:
 
 - adding SEO/social meta tags to the `<head>` of `index.html`;
+- adding the tree/link SVG favicon;
 - updating the project context;
 - creating short bilingual documentation;
 - translating the project context into English.
