@@ -13,7 +13,7 @@ body {
     border-radius: 10px;
     box-shadow: 2px 2px rgba(0, 0, 0, 0.349);
     text-align: center;
-    background-image: url("assets/wallpaper.jpeg");
+    background-image: url("assets/wallpaper3.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -32,7 +32,7 @@ body {
         text-align: center;
         text-decoration: none;
         font-size: 50px;
-        background-color: #ffffffa4;
+        background-color: #ffffff9f;
         font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         transition: 100ms ease-in-out;
         &:hover{
@@ -69,14 +69,14 @@ a img {
 }
 
 .linktree > .link-wrapper a.instagram {
-    background-color: rgba(226, 0, 226, 0.65);
+    background-color: rgba(226, 0, 226, 0.712);
     &:hover{
         background-color: rgb(226, 0, 226);
     }
 }
 
 .linktree > .link-wrapper a.github {
-    background-color: rgba(0, 0, 0, 0.295);
+    background-color: rgba(0, 0, 0, 0.527);
     color: white;
 
     .icon-hover {
@@ -99,7 +99,7 @@ a img {
 }
 
 .linktree > .link-wrapper a.discord{
-    background-color: rgba(88, 101, 242, 0.65);
+    background-color: rgba(88, 101, 242, 0.74);
 
     &:hover{
         background-color: #0519f5d8;
@@ -107,7 +107,7 @@ a img {
 }
 
 .linktree > .link-wrapper a.steam{
-    background-color: rgba(9, 26, 70, 0.65);
+    background-color: rgba(9, 26, 70, 0.747);
     color: white;
 
     &:hover{
@@ -116,7 +116,7 @@ a img {
 }
 
 .linktree > .link-wrapper a.sito{
-    background-color: rgba(124, 58, 237, 0.65);
+    background-color: rgba(124, 58, 237, 0.767);
 
     &:hover{
         background-color: #a855f7;
